@@ -7,9 +7,10 @@
 
 int main(void)
 {
-	char str[] = "coucou";
+	char str[] = "----lol----'--";
+	char set[] = "'-";
 
-	char *str2 = ft_strdup(str);
-	printf("%s\n", str2);
+	char *test = ft_strtrim(str, set);
+	printf("%s\n", test);
     return 0;
 }
