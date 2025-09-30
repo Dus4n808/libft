@@ -13,7 +13,7 @@ int main(void)
 
 	char *ito;
 
-	ito = ft_itoa(0);
+	ito = ft_itoa(12);
 	printf("%s\n", ito);
 
 
