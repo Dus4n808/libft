@@ -7,10 +7,15 @@
 
 int main(void)
 {
-	char str[] = "----lol----'--";
-	char set[] = "'-";
+	char *str;
+	str = ft_substr("ccoucou", 2, 5);
+	printf("%s\n", str);
 
-	char *test = ft_strtrim(str, set);
-	printf("%s\n", test);
+	char *ito;
+
+	ito = ft_itoa(0);
+	printf("%s\n", ito);
+
+
     return 0;
 }

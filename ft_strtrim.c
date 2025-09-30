@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_is_trim_char(char c, char const *set)
+static int	ft_is_trim_char(char c, char const *set)
 {
 	int	i;
 
