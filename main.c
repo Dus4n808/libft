@@ -19,12 +19,30 @@
 int main(void)
 {
 
-	t_list *mylist;
+	t_list *node1;
+	t_list *node2;
+	t_list *node3;
+	t_list *current;
+
 	char *str = "coucou";
+	char *str1 = "hello";
+	char *str2 = "kikou";
 
 
-	mylist = ft_lstnew(str);
-	printf("%s\n", (char *)mylist->content);
+	node1 = ft_lstnew(str);
+	node2 = ft_lstnew(str1);
+	node3 = ft_lstnew(str2);
 
+	ft_lstadd_front(&node1, node3);
+	ft_lstadd_front(&node1, node2);
+
+
+
+	current  =  node1;
+	while (current != NULL)
+	{
+		printf("%s\n", (char *)current->content);
+		current = current->next;
+	}
     return 0;
 }
