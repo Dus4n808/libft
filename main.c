@@ -4,27 +4,25 @@
 #include <string.h>
 #include <stdlib.h>
 
-// static char mapper_up(unsigned int index, char c)
+// static char testmappi(unsigned int index, char c)
 // {
 // 	(void)index;
 // 	return ((unsigned char)ft_toupper((unsigned char)c));
 	
 // }
 
-static void testiteri(unsigned int i, char *str)
-{
-	(void)i;
-	*str = 'A';
-}
+// static void testiteri(unsigned int i, char *str)
+// {
+// 	(void)i;
+// 	*str = 'A';
+// }
 int main(void)
-{
-	char str[] = "coucou les loulou";
-	//printf("%s\n", ft_strmapi(str, mapper_up));
-	
+{	
 
-	ft_striteri(str, testiteri);
-
-	printf("%s\n", str);
+	ft_putchar_fd('c', 1);
+	ft_putstr_fd("coucou\n", 1);
+	ft_putendl_fd("lol\n", 1);
+	ft_putnbr_fd(10, 1);
 
     return 0;
 }
