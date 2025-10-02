@@ -24,5 +24,11 @@ int main(void)
 	ft_putendl_fd("lol\n", 1);
 	ft_putnbr_fd(10, 1);
 
+	t_list *mylist;
+	char *str = "coucou";
+
+	mylist = ft_lstnew(str);
+	printf("%s\n", mylist->content);
+
     return 0;
 }

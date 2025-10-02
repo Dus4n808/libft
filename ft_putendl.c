@@ -6,15 +6,15 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 17:09:52 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/01 17:11:34 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/02 11:37:29 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    while (*s)
-        write(fd, &(*s++), 1);
-    ft_putchar_fd('\n', fd);
+	while (*s)
+		write(fd, &(*s++), 1);
+	ft_putchar_fd('\n', fd);
 }

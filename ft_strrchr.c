@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:38 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:30:39 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/02 11:33:19 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char value;
-	int	last;
+	unsigned char	value;
+	int				last;
 
 	value = (unsigned char)c;
 	last = 0;

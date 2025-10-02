@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:47 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:30:48 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/02 11:28:16 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static int	ft_is_trim_char(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
-	int	size;
-	char *str;
-	int	i;
+	int		start;
+	int		end;
+	int		size;
+	int		i;
+	char	*str;
 
 	if (!s1)
 		return (NULL);
