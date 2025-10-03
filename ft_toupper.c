@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:31:20 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:31:21 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/03 14:53:03 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	value;
-
-	value = (unsigned char)c;
-	if (value >= 'a' && value <= 'z')
-		value -= 32;
-	return (value);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

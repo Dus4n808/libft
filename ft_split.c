@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:05 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/02 11:34:40 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/03 18:11:13 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,26 +40,17 @@ static size_t	count_word(char const *str, char c)
 	return (count);
 }
 
-static size_t	skip_sep(char const *s, char c, size_t i)
-{
-	while (s[i] != '\0' && s[i] == c)
-		i++;
-	return (i);
-}
-
-static size_t	word_len(char const *s, char c, size_t start)
+static size_t	next_word(char const *s, char c, size_t i, size_t *len_i)
 {
 	size_t	len;
-	size_t	i;
 
-	len = 0;
-	i = start;
-	while (s[i] != '\0' && s[i] != c)
-	{
-		len++;
+	while (s[i] != '\0' && s[i] == c)
 		i++;
-	}
-	return (len);
+	len = 0;
+	while (s[i + len] != '\0' && s[i + len] != c)
+		len++;
+	*len_i = len;
+	return (i);
 }
 
 static char	*dup_word(char const *s, size_t start, size_t len)
@@ -80,6 +71,17 @@ static char	*dup_word(char const *s, size_t start, size_t len)
 	return (dest);
 }
 
+char	**clear_tab(char **tab, size_t i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(tab[i]);
+	}
+	free(tab);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -92,13 +94,16 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	nb = count_word(s, c);
 	res = malloc((nb + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
 	w = 0;
 	i = 0;
 	while (w < nb)
 	{
-		i = skip_sep(s, c, i);
-		len = word_len(s, c, i);
+		i = next_word(s, c, i, &len);
 		res[w] = dup_word(s, i, len);
+		if (res[w] == NULL)
+			return (clear_tab(res, w));
 		i += len;
 		w++;
 	}

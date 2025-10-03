@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 17:31:16 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 14:54:56 by dufama           ###   ########.fr       */
+/*   Created: 2025/10/03 15:33:25 by dufama            #+#    #+#             */
+/*   Updated: 2025/10/03 15:54:05 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	t_list	*current;
+
+	current = lst;
+	if (!lst || !f)
+		return;
+	while (current != NULL)
+	{
+		f(current->content);
+		current = current->next;
+	}
 }

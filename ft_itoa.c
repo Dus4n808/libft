@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:17:11 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:29:13 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/03 18:58:24 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,20 @@ static void	print_in_string(int size, char *str, long nb)
 	int	i;
 
 	i = 0;
-	while (i < size - 1)
+	while (i < size)
 	{
 		str[i] = nb % 10 + '0';
 		nb /= 10;
 		i++;
 	}
+	str[i] = '\0';
 }
 
 char	*ft_itoa(int n)
 {
 	int		size;
 	int		sign;
+	int		digit;
 	char	*str;
 	long	nb;
 
@@ -73,12 +75,16 @@ char	*ft_itoa(int n)
 		sign = 1;
 		nb = -nb;
 	}
-	size = (strlen_plus(nb) + 1 + sign);
+	digit = strlen_plus(nb);
+	size = digit + 1 + sign;
 	str = malloc(size);
-	print_in_string(size, str, nb);
-	reverse(str);
-	str[size - 1] = '\0';
+	if (!str)
+		return (NULL);
+	print_in_string(digit, str, nb);
 	if (sign)
-		str[0] = '-';
-	return (str);
+	{
+		str[digit] = '-';
+		str[digit + 1] = '\0';
+	}
+	return (reverse(str));
 }

@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 17:31:16 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 14:54:56 by dufama           ###   ########.fr       */
+/*   Created: 2025/10/03 15:54:59 by dufama            #+#    #+#             */
+/*   Updated: 2025/10/03 16:04:04 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	t_list	*newNode;
+	t_list	*mylist;
+
+	newNode = NULL;
+	mylist = NULL;
+	if (!lst || !f || !del)
+		return (NULL);
+	while (lst)
+	{
+		newNode = ft_lstnew(f(newNode->content));
+		if (!newNode)
+		{
+			ft_lstclear(&lst, del);
+			return (NULL);
+		}
+		ft_lstadd_front(&mylist, newNode);
+	}
+	return (mylist);
 }
