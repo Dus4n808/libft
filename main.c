@@ -16,33 +16,55 @@
 // 	(void)i;
 // 	*str = 'A';
 // }
+
+static void del_element(void *content)
+{
+	(void)content;
+}
 int main(void)
 {
 
-	t_list *node1;
-	t_list *node2;
-	t_list *node3;
+	t_list *mylist;
+
+	mylist = ft_lstnew((char *)"coucou");
+
+
+
+	t_list *newnode;
+
+
+	newnode = ft_lstnew((char *)"Lol");
+
+
+	ft_lstadd_front(&mylist, newnode);
+
 	t_list *current;
 
-	char *str = "coucou";
-	char *str1 = "hello";
-	char *str2 = "kikou";
+	current = mylist;
 
+	t_list *node1 = ft_lstnew((char *)"nouveau");
+	ft_lstadd_front(&mylist, node1);
 
-	node1 = ft_lstnew(str);
-	node2 = ft_lstnew(str1);
-	node3 = ft_lstnew(str2);
+	printf("%s\n", (char *)mylist->content);
 
-	ft_lstadd_front(&node1, node3);
-	ft_lstadd_front(&node1, node2);
-
-
-
-	current  =  node1;
 	while (current != NULL)
 	{
 		printf("%s\n", (char *)current->content);
 		current = current->next;
 	}
-    return 0;
+	current = mylist;
+	t_list *lastnode = ft_lstlast(mylist);
+
+	printf("%d\n", ft_lstsize(mylist));
+	printf("%s\n", (char *)lastnode->content);
+	t_list *node2 = ft_lstnew((char *)"dernier");
+
+	ft_lstadd_back(&mylist, node2);
+	ft_lstdelone(ft_lstlast(mylist), del_element);
+	current = mylist;
+	while (current != NULL)
+	{
+		printf("%s\n", (char *)current->content);
+		current = current->next;
+	}
 }
