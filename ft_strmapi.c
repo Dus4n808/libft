@@ -6,12 +6,13 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 10:00:05 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/02 11:30:28 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 13:06:23 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//crée une nouvelle chaine de caractère et applique f a chaque
+//caractère
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t				size;

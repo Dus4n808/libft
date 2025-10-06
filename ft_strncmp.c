@@ -6,12 +6,12 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:31 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:30:32 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 13:07:13 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//compare n caractère de s1 et s2
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

@@ -6,12 +6,13 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:35 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:30:36 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 13:09:40 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//trouve une sous chaine et retourne un pointeur vers le début
+//de la sous chaine
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

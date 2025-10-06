@@ -6,12 +6,12 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:47 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/02 11:28:16 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 13:14:11 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//trim une chaine de caractère
 static int	ft_is_trim_char(char c, char const *set)
 {
 	int	i;

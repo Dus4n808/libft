@@ -6,12 +6,13 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:38 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 19:04:05 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 13:13:55 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//cherche la derniere occurence d'un caractère dans une chaine
+//donc on itere depuis la fin
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	value;

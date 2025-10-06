@@ -6,12 +6,12 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:02 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/02 11:31:04 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 12:30:27 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//met le bloc mémoire à la valeur len octet a la valeur c
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*i;

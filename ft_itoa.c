@@ -6,12 +6,14 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:17:11 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 18:58:24 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 11:27:06 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+// permet de convertir un entier (12) en chaine ("12")
+// elle imprime les caratère a l'envers donc une fonction reverse
+// est nécessaire
 static int	strlen_plus(long n)
 {
 	int	i;

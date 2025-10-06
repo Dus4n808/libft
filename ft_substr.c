@@ -6,12 +6,13 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:31:13 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 17:50:15 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 13:20:39 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//retourne une sous chaine alloué avec malloc
+//comment a l'index start de s et copie len caractère
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new_str;

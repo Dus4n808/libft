@@ -6,10 +6,12 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:47:10 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 15:50:31 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 11:25:07 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+// check si c'est alpha a à z ou. A à Z
 int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
@@ -17,10 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-// #include <stdio.h>
-// #include <ctype.h>
-// int	main(void)
-// {
-// 	printf("%d", ft_isalpha('l'));
-// 	printf("%d", isalpha('l'));
-// }

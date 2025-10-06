@@ -34,9 +34,27 @@ static void up_element(void *content)
 		p[i] -= 32;
 		i++;
 	}
-
-
 }
+static void *upper_copy(void *content)
+{
+	char *str;
+	char *copy;
+	int i;
+
+	i = 0;
+	str = (char *)content;
+	copy = ft_strdup(str);
+	if (!copy)
+		return (NULL);
+	while (copy[i])
+	{
+		if (ft_toupper(copy[i]))
+			copy[i] += 32;
+		i++;
+	}
+	return (copy);
+}
+
 int main(void)
 {
 	t_list *mylist;
@@ -80,5 +98,17 @@ int main(void)
 		printf("%s\n", (char *)current->content);
 		current = current->next;
 	}
+	printf("%d\n", ft_lstsize(mylist));
+	t_list *mapp_list = NULL;
 
+	mapp_list = ft_lstmap(mylist, upper_copy, del_element);
+	ft_lstclear(&mylist, del_element);
+	printf("%d\n", ft_lstsize(mylist));
+	current = mapp_list;
+	while (current != NULL)
+	{
+		printf("%s\n", (char *)current->content);
+		current = current->next;
+	}
+	printf("%d\n", ft_lstsize(mapp_list));
 }

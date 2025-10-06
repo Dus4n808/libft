@@ -6,12 +6,12 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:29:38 by dufama            #+#    #+#             */
-/*   Updated: 2025/09/30 17:29:39 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 11:25:53 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//caractère pintable
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

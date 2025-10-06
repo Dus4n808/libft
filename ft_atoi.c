@@ -6,11 +6,13 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:45:34 by dusanfama         #+#    #+#             */
-/*   Updated: 2025/09/30 15:49:37 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 10:59:11 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// cette fonction permet de convertir les caractères ascii
+// (chaine de carartère) vers un entier -> "12" == (int)12;
 
 int	ft_atoi(const char *str)
 {

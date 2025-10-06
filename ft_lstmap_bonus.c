@@ -6,30 +6,37 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 15:54:59 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 16:04:04 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 11:35:51 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//prend une liste et fait une copie en appliquant f
+//si un noeud echoue la liste est supprimé
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*newNode;
+	t_list	*new_node;
 	t_list	*mylist;
+	t_list	*temp;
 
-	newNode = NULL;
 	mylist = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	while (lst)
 	{
-		newNode = ft_lstnew(f(newNode->content));
-		if (!newNode)
+		temp = f(lst->content);
+		new_node = NULL;
+		if (temp)
+			new_node = ft_lstnew(temp);
+		if (!temp || !new_node)
 		{
-			ft_lstclear(&lst, del);
+			if (temp && !new_node)
+				del(temp);
+			ft_lstclear(&mylist, del);
 			return (NULL);
 		}
-		ft_lstadd_front(&mylist, newNode);
+		ft_lstadd_back(&mylist, new_node);
+		lst = lst->next;
 	}
 	return (mylist);
 }

@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:31:24 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 15:55:59 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/04 11:38:55 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef struct s_list
 {
