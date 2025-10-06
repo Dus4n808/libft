@@ -6,13 +6,13 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 15:54:59 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/06 11:35:51 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 18:33:11 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 //prend une liste et fait une copie en appliquant f
-//si un noeud echoue la liste est supprimé
+//si un noeud echoue la liste estsupprimé
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_node;

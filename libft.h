@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:31:24 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/04 11:38:55 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/06 15:39:48 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,25 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
-	void	*content;
+	void			*content;
 	struct s_list	*next;
 }	t_list;
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
-int	ft_strncmp(const char *s1, const char *s2, size_t n);
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
-int	ft_atoi(const char *str);
-int	ft_lstsize(t_list *lst);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_atoi(const char *str);
+int		ft_lstsize(t_list *lst);
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
