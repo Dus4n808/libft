@@ -42,10 +42,10 @@ bonus:	$(OBJSALL)
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJSALL)
+	@$(RM) $(OBJSALL)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
