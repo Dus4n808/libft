@@ -57,5 +57,4 @@ test_bonus: bonus main.c
 	$(CC) $(CFLAGS) main.c -L. -lft -o test
 	./test
 
-.PHONY: all clean fclean re bonus
-
+.PHONY: all clean fclean re bonus test test_bonus
