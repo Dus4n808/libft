@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:46:42 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/06 11:02:36 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/07 10:32:14 by dufama           ###   ####lausanne.ch   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (count != 0 && size > SIZE_MAX / count)
 		return (NULL);
 	if (count == 0 || size == 0)
-		return (NULL);
+		return (malloc(0));
 	len = size * count;
 	bloc = malloc(len);
 	if (!bloc)

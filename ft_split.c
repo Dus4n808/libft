@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:30:05 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/03 18:11:13 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/07 11:13:28 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ static size_t	count_word(char const *str, char c)
 	return (count);
 }
 
-static size_t	next_word(char const *s, char c, size_t i, size_t *len_i)
+static size_t	next_word(char const *s, char c, size_t start, size_t *len_fin)
 {
 	size_t	len;
 
-	while (s[i] != '\0' && s[i] == c)
-		i++;
+	while (s[start] != '\0' && s[start] == c)
+		start++;
 	len = 0;
-	while (s[i + len] != '\0' && s[i + len] != c)
+	while (s[start + len] != '\0' && s[start + len] != c)
 		len++;
-	*len_i = len;
-	return (i);
+	*len_fin = len;
+	return (start);
 }
 
 static char	*dup_word(char const *s, size_t start, size_t len)
