@@ -6,16 +6,14 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 17:31:24 by dufama            #+#    #+#             */
-/*   Updated: 2025/10/06 15:39:48 by dufama           ###   ########.fr       */
+/*   Updated: 2025/10/07 11:21:27 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
-# include <limits.h>
 # include <stdint.h>
 
 typedef struct s_list
